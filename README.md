@@ -19,17 +19,13 @@ A lightweight Chrome extension designed for language learners to seamlessly repe
 * **Minimalist Video Overlay**: A tiny, elegant icon embedded directly inside the video player (left-middle). Semi-transparent gray when idle, pure glowing white when active.
 * **Quick Navigation**: Easily hop to the next or previous sentence while keeping repeat mode on.
 
-### ⌨️ Keyboard Shortcuts
+### ⌨️ Keyboard Shortcut
 
 | Shortcut | Action | Description |
 | :--- | :--- | :--- |
 | **`Z`** | **Toggle Repeat (Enable / Disable)** | Instantly start or stop repeating the current sentence |
-| **`Alt + R`** | Toggle Repeat (Alternative) | Backup combination shortcut |
-| **`D`** or **`]`** | **Next Sentence** | Jump to the next subtitle sentence and continue looping |
-| **`A`** or **`[`** | **Previous Sentence** | Jump back to the previous subtitle sentence and continue looping |
-| **`S`** | **Re-seek to Start** | Jump back to the start of the currently looping sentence |
 
-> *Note: Shortcuts are automatically disabled when typing in input boxes or comment sections.*
+> *Note: The shortcut is automatically disabled when typing in input boxes or comment sections.*
 
 ### 📦 Installation
 
@@ -66,11 +62,7 @@ A lightweight Chrome extension designed for language learners to seamlessly repe
 
 | 快捷键 | 功能 | 说明 |
 | :--- | :--- | :--- |
-| **`Z`** | **开关复读 (Enable / Disable)** | 最顺手的单键极速开关 |
-| **`Alt + R`** | 开关复读 (备用) | 备用组合键 |
-| **`D`** 或 **`]`** | **下一句** | 立即切换到下一句并持续循环 |
-| **`A`** 或 **`[`** | **上一句** | 立即跳回上一句并持续循环 |
-| **`S`** | **回到句首** | 立即回到当前句的起始时间点 |
+| **`Z`** | **开关复读 (Enable / Disable)** | 单键极速开启或关闭当前句子的循环播放 |
 
 > *注：在搜索框、评论区打字输入时会自动屏蔽快捷键，防止打字冲突。*
 

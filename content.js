@@ -387,7 +387,7 @@
   }
 
   // ==========================================
-  // 键盘快捷键监听
+  // 键盘快捷键监听 (仅保留 Z 键)
   // ==========================================
   document.addEventListener(
     'keydown',
@@ -402,34 +402,6 @@
         e.preventDefault();
         e.stopPropagation();
         toggleRepeating();
-        return;
-      }
-
-      // Alt + R: 开关循环备用快捷键
-      if (e.altKey && (e.key === 'r' || e.key === 'R')) {
-        e.preventDefault();
-        e.stopPropagation();
-        toggleRepeating();
-        return;
-      }
-
-      // 当循环开启时:
-      if (state.active && !e.altKey && !e.ctrlKey && !e.metaKey) {
-        // D 或 ]: 下一句
-        if (e.key === ']' || e.key === 'd' || e.key === 'D') {
-          playNextSentence();
-        }
-        // A 或 [: 上一句
-        else if (e.key === '[' || e.key === 'a' || e.key === 'A') {
-          playPrevSentence();
-        }
-        // S: 回到句首
-        else if (e.key === 's' || e.key === 'S') {
-          if (state.loopStart !== null) {
-            const v = getVideo();
-            if (v) seekVideo(v, state.loopStart);
-          }
-        }
       }
     },
     true
@@ -446,7 +418,7 @@
       container = document.createElement('div');
       container.id = 'yr-repeater-container';
       container.innerHTML = `
-        <button id="yr-toggle-btn" title="重复当前字幕句子 (快捷键 Z 或 Alt+R)">
+        <button id="yr-toggle-btn" title="重复当前字幕句子 (快捷键 Z)">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2.2"
                stroke-linecap="round" stroke-linejoin="round">
