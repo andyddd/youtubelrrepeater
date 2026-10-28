@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Subtitle Sentence Repeater",
+  "version": "1.1.0",
+  "description": "在YouTube上持续重复播放当前字幕句子，支持原生字幕与各类双语字幕。Continuously repeat the current subtitle sentence on YouTube.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Subtitle Sentence Repeater",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

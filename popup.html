@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <svg class="logo" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="17 1 21 5 17 9"></polyline>
+        <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+        <polyline points="7 23 3 19 7 15"></polyline>
+        <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+      </svg>
+      <h1>YouTube 字幕复读机</h1>
+    </div>
+
+    <div class="toggle-section">
+      <label class="toggle-label">
+        <span class="toggle-text">重复当前字幕句子</span>
+        <div class="toggle-switch">
+          <input type="checkbox" id="repeat-toggle">
+          <span class="slider"></span>
+        </div>
+      </label>
+    </div>
+
+    <div id="status-section" class="status-section hidden">
+      <div class="status-top">
+        <div id="status-icon" class="status-icon">🔄</div>
+        <div id="status-text" class="status-text">正在循环播放</div>
+      </div>
+      <div id="sub-preview" class="sub-preview"></div>
+      <div class="nav-buttons">
+        <button id="btn-prev" class="nav-btn" title="上一句 (快捷键 A 或 [)">⏮ 上一句</button>
+        <button id="btn-next" class="nav-btn" title="下一句 (快捷键 D 或 ])">下一句 ⏭</button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="info-section">
+      <div class="shortcut-info">
+        <kbd>Z</kbd> / <kbd>Alt</kbd> + <kbd>R</kbd>
+        <span>开关重复 (Enable/Disable)</span>
+      </div>
+      <div class="shortcut-info">
+        <kbd>D</kbd> / <kbd>A</kbd> 或 <kbd>]</kbd> / <kbd>[</kbd>
+        <span>下一句 / 上一句</span>
+      </div>
+      <div class="shortcut-info">
+        <kbd>S</kbd>
+        <span>重新回到句首</span>
+      </div>
+      <p class="note">
+        💡 自动识别当前屏幕字幕并持续重复播放，支持 YouTube 原生字幕与任意双语字幕扩展。
+      </p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
